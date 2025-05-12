@@ -1,0 +1,19 @@
+<div class="parent">
+    <div class = "panel">
+        <div class="right-panel">
+            <p class="right-panel-words">{{ main_words }}</p>
+        </div>
+    </div>
+    <div class="panel">
+      <div class="left-panel">
+        <p class="left-panel-words">{{ words_two }}</p>
+      </div>
+    </div>
+    <div class="panel">
+        <div class="center-panel">
+            <p class="center-panel-words">{{ words_three }}</p>
+            <button class="rsvp-button" (click)="openModal()">right here</button>
+            <app-rsvp *ngIf="is_modal_visible" (close)="hideModal()"></app-rsvp>
+        </div>
+    </div>
+  </div>

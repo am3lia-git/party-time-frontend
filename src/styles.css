@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --brat-green: #8ACE00; 
+}
+
+* {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    background-color: var(--brat-green);
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,47 @@
+<div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h2>rsvp</h2>
+            <button class="close-button" (click)="closeModal()">x</button>
+        </div>
+        <div class="details">
+            <p>may 31, 2025, 8:00 pm est - i will tell u more details if u rsvp a 'yes' or a 'maybe'</p>
+        </div>
+      <form (ngSubmit)="submitRsvp()">
+        <div class="form-group">
+          <label for="name">name:</label>
+          <input id="name" type="name" [(ngModel)]="name" name="name" placeholder="enter ur name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">email:</label>
+          <input id="email" type="email" [(ngModel)]="email" name="email" placeholder="enter ur email"
+          required />
+        </div>
+        <div class="form-group">
+          <label for="email-two">confirm email:</label>
+          <input id="email-two" type="email-two" [(ngModel)]="emailTwo" name="email-two" placeholder="enter ur email again"
+          required />
+        </div>
+        <div class="form-group attendance">
+            <div>
+                <label for="attendance">will u attend?</label>
+                <select id="attendance" [(ngModel)]="attendance" name="attendance">
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                  <option value="maybe">maybe</option>
+                </select>
+            </div>
+          <div class="button-container">
+            <button type="submit" class="submit-button">submit</button>
+          </div>
+        </div>
+        <div *ngIf="emailTwo && email !== emailTwo" style="color: red; font-size: 12pt;">
+            emails do not match
+          </div>
+          <div *ngIf="loading" class="loading-indicator">
+            <p>submitting ur rsvp...</p>
+          </div>
+        
+      </form>
+    </div>
+  </div>

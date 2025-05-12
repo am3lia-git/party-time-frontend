@@ -1,0 +1,78 @@
+.parent {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .panel {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .left-panel{
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    filter: blur(2px);
+  }
+
+  .right-panel {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: top;
+    font-size: 90px;
+    margin-left: 50vw;
+    filter: blur(2px);
+
+  }
+
+  .right-panel-words{
+    transform: scaleX(-1);
+
+  }
+
+  .center-panel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+  }
+
+.center-panel-words{
+    filter: blur(2px);
+}
+  
+  .full-width {
+    width: 100vw;
+  }
+
+  .rsvp-button {
+    background-color: white;
+    color: black; 
+    font-size: 24px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+    margin-top: 10px;
+    padding: 10px 20px;
+    filter: blur(1px);
+}
+  
+  @media (max-width: 768px) {
+    .left-panel,
+    .right-panel {
+        font-size: 40px; 
+    }
+}
